@@ -1,0 +1,217 @@
+.bt-click {
+  background: #1890ff;
+  color: white;
+}
+
+.model-option .el-button-group .el-button {
+  width: 50%
+}
+
+.color-option .el-button-group .el-button {
+  width: 33.33%
+}
+
+
+.color-div {
+  display: inline-block;
+  height: 30px;
+  flex: 1 1;
+}
+
+.color-box {
+  width: calc(100% - 10px) !important;
+  box-shadow: 1px 1px 4px 1pxrgba(0,0,0,.15);
+  transition: 0.3s;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-box:hover {
+  box-shadow: 0 0 20px 2px rgb(0 0 0 / 40%);
+  width: calc(100% - 5px) !important;
+  cursor: pointer;
+}
+
+.color-scrollbar {
+  height: 100%;
+  width: 360px;
+  flex: 0 0 360px;
+}
+
+.color-scrollbar .el-scrollbar__wrap {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.color-container {
+  height: 89vh
+}
+
+.backgroud-content  {
+  flex: 1 1 auto;
+  z-index: 1;
+  position: relative;
+}
+
+.backgroud-canvas {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8e8e8;
+  height: 100%;
+  padding: 60px;
+}
+
+.color-container .el-main {
+  padding: 0;
+  flex: 1 1 auto;
+  z-index: 1;
+  position: relative;
+}
+
+.backgroud-export {
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 25px;
+  text-align: center;
+  position: absolute;
+}
+
+.button-export {
+  width: 80px
+}
+
+.backgroud-canvas canvas {
+  max-height: 100%;
+  max-width: 100%;
+  flex: 1 1 auto;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(2px 2px 8px rgba(0,0,0,.2));
+}
+
+
+.self-background .el-dialog__header {
+  padding: 0
+}
+  
+.self-background .el-dialog__body {
+  padding: 0
+}
+
+
+.self-main {
+  padding: 30px;
+  background: #e8e8e8;
+  flex: 1 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.self-content {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.self-main canvas {
+  max-width: 100%;
+  width: 300px;
+  max-height: 100%;
+  height: 200px;
+  object-fit: contain;
+  filter: drop-shadow(2px 2px 8px rgba(0,0,0,.2));
+}
+
+.self-footer {
+  padding: 15px 30px 30px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.self-content {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.self-color {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.self-lable {
+  text-align: center;
+  display: block;
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.color-content {
+  display: inline-flex;
+  justify-content: center;
+  max-width: calc(100% - 90px);
+}
+
+.color-item {
+  height: 30px;
+  width: 30px;
+  flex: 0 1 30px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 2px;
+  transition: transform .2s ease,box-shadow .2s ease;
+}
+
+.color-item .el-color-picker__icon {
+  display: none;
+}
+
+.color-item .el-color-picker__trigger {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  height: 30px;
+  width: 30px;
+}
+
+.color-item .el-color-picker__color {
+  border: 0
+}
+
+.self-color .color-content .color-bt {
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.self-footer .el-button:hover {
+  background: #1890ff;
+  color: white;
+}
+
+.size10-cal {
+  width: calc(100% - 10px) !important;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.el-aside .el-row {
+  width: 295px;
+  margin: 10px auto;
+}
+
+.el-aside .el-row .text {
+  margin: 0 0 2px 5px;
+  text-align: left;
+  display: inherit;
+}
