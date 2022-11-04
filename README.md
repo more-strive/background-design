@@ -1,4 +1,4 @@
-# background-design
+# background-generate
 
 > 这是一个基于Vue2.x + Element-ui + Trianglify 的背景生成应用，还原了<a href="https://trianglify.io/">Trianglify.io</a> (基于react开发)的大部分功能
 
