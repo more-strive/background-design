@@ -103,8 +103,8 @@ export default {
         selectShadows: ''
       },
       showSelf: false,
-      width: 1200,
-      height: 600,
+      width: 1920,
+      height: 1080,
       intensity: 0,            // 模式强度
       variance: 0,             // 三角形方差
       cellSize: 0,            // 元素尺寸
@@ -272,13 +272,32 @@ export default {
 
     // 导出图片
     exportBackground () {
-      var canvas = this.trianglify.toCanvas();
-      var url = canvas.toDataURL("imgae/png");
-      var a = document.createElement('a');
-      a.href = url;
-      a.download = 'background.png';
-      a.click();
-      window.URL.revokeObjectURL(url); // 释放
+      // var canvas = this.trianglify.toCanvas();
+      // var url = canvas.toDataURL("image/svg");
+      // var a = document.createElement('a');
+      // a.href = url;
+      // a.download = 'background.svg';
+      // a.click();
+      // window.URL.revokeObjectURL(url); // 释放
+
+      var svg = this.trianglify.toSVG();
+      console.log('svg:', new XMLSerializer().serializeToString(svg))
+      // var url = canvas.toDataURL("image/svg");
+      // var a = document.createElement('a');
+      // a.href = url;
+      // a.download = 'background.svg';
+      // a.click();
+      // window.URL.revokeObjectURL(url); // 释放
+      const blob = new Blob([new XMLSerializer().serializeToString(svg)], { type: "image/svg+xml" })
+      const href = URL.createObjectURL(blob)
+      const alink = document.createElement("a")
+      alink.style.display = "none"
+      alink.download = name // 下载后文件名
+      alink.href = href
+      document.body.appendChild(alink)
+      alink.click()
+      document.body.removeChild(alink) // 下载完成移除元素
+      URL.revokeObjectURL(href) // 释放掉blob对象
     },
 
     // 选择默认颜色
